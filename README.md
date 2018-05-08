@@ -21,9 +21,9 @@ Lex, Lambda, DynamoDB, Cognito, SES, S3
    a. I am not feeling well <br />
    b. I am not ok <br />
    c. I am not good <br /> 
-   d. I am sick <br />
+   d. I am sick <br /> <br />
    
-   Fulfilment : <br />
+  Fulfilment : <br />
    a. tell me <br /> 
    b. stop asking <br />
    c. whats my disease <br />
