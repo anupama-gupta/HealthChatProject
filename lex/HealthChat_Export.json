@@ -1,0 +1,235 @@
+{
+  "metadata": {
+    "schemaVersion": "1.0",
+    "importType": "LEX",
+    "importFormat": "JSON"
+  },
+  "resource": {
+    "name": "HealthChat",
+    "version": "1",
+    "intents": [
+      {
+        "name": "InferDisease",
+        "version": "3",
+        "fulfillmentActivity": {
+          "type": "CodeHook",
+          "codeHook": {
+            "uri": "arn:aws:lambda:us-east-1:949330862585:function:HealthChat",
+            "messageVersion": "1.0"
+          }
+        },
+        "sampleUtterances": [
+          "i am not good",
+          "i am sick",
+          "i dont feel well",
+          "i am not ok",
+          "I am not feeling well"
+        ],
+        "slots": [
+          {
+            "name": "Symptom",
+            "slotConstraint": "Required",
+            "slotType": "Symptom",
+            "slotTypeVersion": "2",
+            "valueElicitationPrompt": {
+              "messages": [
+                {
+                  "contentType": "PlainText",
+                  "content": "Could you tell more ?"
+                }
+              ],
+              "maxAttempts": 2
+            },
+            "priority": 1,
+            "sampleUtterances": []
+          }
+        ],
+        "dialogCodeHook": {
+          "uri": "arn:aws:lambda:us-east-1:949330862585:function:HealthChat",
+          "messageVersion": "1.0"
+        }
+      },
+      {
+        "name": "GetReport",
+        "version": "2",
+        "fulfillmentActivity": {
+          "type": "CodeHook",
+          "codeHook": {
+            "uri": "arn:aws:lambda:us-east-1:949330862585:function:HealthChat",
+            "messageVersion": "1.0"
+          }
+        },
+        "sampleUtterances": [
+          "get my report",
+          "send report",
+          "i want report",
+          "Send me details"
+        ],
+        "slots": [
+          {
+            "name": "Email",
+            "slotConstraint": "Required",
+            "slotType": "AMAZON.EmailAddress",
+            "valueElicitationPrompt": {
+              "messages": [
+                {
+                  "contentType": "PlainText",
+                  "content": "Please enter your email id"
+                }
+              ],
+              "maxAttempts": 2
+            },
+            "priority": 1,
+            "sampleUtterances": []
+          }
+        ],
+        "dialogCodeHook": {
+          "uri": "arn:aws:lambda:us-east-1:949330862585:function:HealthChat",
+          "messageVersion": "1.0"
+        }
+      },
+      {
+        "name": "GetDoctor",
+        "version": "2",
+        "fulfillmentActivity": {
+          "type": "CodeHook",
+          "codeHook": {
+            "uri": "arn:aws:lambda:us-east-1:949330862585:function:HealthChat",
+            "messageVersion": "1.0"
+          }
+        },
+        "sampleUtterances": [
+          "hospital appointment",
+          "get doctor",
+          "book doctors appointment",
+          "book doctor"
+        ],
+        "slots": [
+          {
+            "name": "Email",
+            "slotConstraint": "Optional",
+            "slotType": "AMAZON.EmailAddress",
+            "valueElicitationPrompt": {
+              "messages": [
+                {
+                  "contentType": "PlainText",
+                  "content": "Please enter your email id"
+                }
+              ],
+              "maxAttempts": 2
+            },
+            "priority": 3,
+            "sampleUtterances": []
+          },
+          {
+            "name": "HospitalChoice",
+            "slotConstraint": "Required",
+            "slotType": "AMAZON.NUMBER",
+            "valueElicitationPrompt": {
+              "messages": [
+                {
+                  "contentType": "PlainText",
+                  "content": "Please enter your hospital choice"
+                }
+              ],
+              "maxAttempts": 2
+            },
+            "priority": 2,
+            "sampleUtterances": []
+          },
+          {
+            "name": "Location",
+            "slotConstraint": "Required",
+            "slotType": "AMAZON.NUMBER",
+            "valueElicitationPrompt": {
+              "messages": [
+                {
+                  "contentType": "PlainText",
+                  "content": "Please enter the zipcode of your location"
+                }
+              ],
+              "maxAttempts": 2
+            },
+            "priority": 1,
+            "sampleUtterances": []
+          }
+        ],
+        "dialogCodeHook": {
+          "uri": "arn:aws:lambda:us-east-1:949330862585:function:HealthChat",
+          "messageVersion": "1.0"
+        }
+      },
+      {
+        "name": "GetConfirmation",
+        "version": "2",
+        "fulfillmentActivity": {
+          "type": "CodeHook",
+          "codeHook": {
+            "uri": "arn:aws:lambda:us-east-1:949330862585:function:HealthChat",
+            "messageVersion": "1.0"
+          }
+        },
+        "sampleUtterances": [
+          "send booking details",
+          "send me confirmation",
+          "get confirmation"
+        ],
+        "slots": [
+          {
+            "name": "Email",
+            "slotConstraint": "Optional",
+            "slotType": "AMAZON.EmailAddress",
+            "valueElicitationPrompt": {
+              "messages": [
+                {
+                  "contentType": "PlainText",
+                  "content": "Please enter your email id"
+                }
+              ],
+              "maxAttempts": 2
+            },
+            "priority": 1,
+            "sampleUtterances": []
+          }
+        ],
+        "dialogCodeHook": {
+          "uri": "arn:aws:lambda:us-east-1:949330862585:function:HealthChat",
+          "messageVersion": "1.0"
+        }
+      }
+    ],
+    "slotTypes": [
+      {
+        "name": "Symptom",
+        "version": "2",
+        "enumerationValues": [
+          {
+            "value": "tell me"
+          }
+        ],
+        "valueSelectionStrategy": "TOP_RESOLUTION"
+      }
+    ],
+    "voiceId": "Salli",
+    "childDirected": false,
+    "locale": "en-US",
+    "idleSessionTTLInSeconds": 1200,
+    "clarificationPrompt": {
+      "messages": [
+        {
+          "contentType": "PlainText",
+          "content": "Sorry, can you please repeat that?"
+        }
+      ],
+      "maxAttempts": 5
+    },
+    "abortStatement": {
+      "messages": [
+        {
+          "contentType": "PlainText",
+          "content": "Sorry, I could not understand. Goodbye."
+        }
+      ]
+    }
+  }
+}
