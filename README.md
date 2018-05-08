@@ -1,21 +1,21 @@
-# HealthChatProject
+## HealthChatProject
 Cloud Computing and Big Data (COMS 6998) project
 
-# Description
+## Description
 This project implements a Chatbot (text and voice) Web application with the following functionalities:
 1. Disease diagnosis via question answering through response cards
 2. Report generation based on Step 1. 
 3. Hospital recommendation (based on user preference history)
 4. Booking the doctor's appointment based on user selection in Step 3.
 
-# Team ID: 11
+## Team ID: 11
 1. Anupama Gupta(ag3900)
 2. Namrata Uday Devadiga(nd2561)
 
 # AWS Services Involved
 Lex, Lambda, DynamoDB, Cognito, SES, S3
 
-# Intents
+## Intents
 1. InferDisease
    Example Utterances :
    a. I am not feeling well
@@ -40,7 +40,7 @@ Lex, Lambda, DynamoDB, Cognito, SES, S3
    b. i want report
    c. send me details
 
-# Example Conversation
+## Example Conversation
 User - I am not feeling well.
 Bot - Whats your age ?
 User - 16
@@ -65,7 +65,7 @@ Bot - Here are the recommended nearby hospitals.1. The Mount Sinai Hospital - Ne
 User - 1
 Bot - Doctor's Appointment Booked. Appointment details sent to ag3900@columbia.edu
 
-# Example Conversation 2 (Enter "Go back" to re-answer the last question)
+## Example Conversation 2 (Enter "Go back" to re-answer the last question)
 User - I am not feeling well.
 Bot - Whats your age ?
 User - 16
