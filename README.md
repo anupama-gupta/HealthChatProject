@@ -18,21 +18,21 @@ Lex, Lambda, DynamoDB, Cognito, SES, S3
 ## Intents
 1. InferDisease
    Example Utterances :
-   a. I am not feeling well . 
-   b. I am not ok . 
-   c. I am not good . 
-   d. I am sick . 
+   a. I am not feeling well <br />
+   b. I am not ok <br />
+   c. I am not good <br /> 
+   d. I am sick <br />
    
    Fulfilment :
-   a. tell me . 
-   b. stop asking . 
-   c. whats my disease . 
+   a. tell me <br /> 
+   b. stop asking <br />
+   c. whats my disease <br />
    
 2. BookDoctor
    Example Utterances :  
-   a. book doctor . 
-   b. get doctor . 
-   c. book doctor's appointment . 
+   a. book doctor <br />
+   b. get doctor <br /> 
+   c. book doctor's appointment <br /> 
   
 3. GetReport
    Example Utterances :
