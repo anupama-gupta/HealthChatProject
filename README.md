@@ -16,7 +16,7 @@ This project implements a Chatbot (text and voice) Web application with the foll
 Lex, Lambda, DynamoDB, Cognito, SES, S3
 
 ## Intents
-1. InferDisease 
+1. InferDisease  <br />
    Example Utterances : <br />
    a. I am not feeling well <br />
    b. I am not ok <br />
@@ -28,13 +28,13 @@ Lex, Lambda, DynamoDB, Cognito, SES, S3
    b. stop asking <br />
    c. whats my disease <br />
    
-2. BookDoctor
+2. BookDoctor <br />
    Example Utterances : <br /> 
    a. book doctor <br />
    b. get doctor <br /> 
    c. book doctor's appointment <br /> 
   
-3. GetReport
+3. GetReport <br />
    Example Utterances : <br />
    a. get my report  <br />
    b. i want report  <br />
