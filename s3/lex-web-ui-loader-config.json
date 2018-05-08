@@ -1,0 +1,28 @@
+{
+  "cognito": {
+    "poolId": "us-east-1:94cd89a0-ee65-488f-8cfa-921c3b63d860"
+  },
+  "lex": {
+    "botName": "HealthChat",
+    "initialText": "Just type \"I am not feeling well\" or click on the mic and say it. Enter 'go back' to re-answer health question. Enter 'tell me' to get disease.",
+    "initialSpeechInstruction": "Say 'I am not feeling well' to get started.",
+    "reInitSessionAttributesOnRestart": false
+  },
+  "ui": {
+    "parentOrigin": "https://lex-web-ui-codebuilddeploy-19pjgxq94-webappbucket-uag9p36abgfw.s3.amazonaws.com",
+    "toolbarTitle": "HealthChat",
+    "toolbarLogo": "",
+    "pushInitialTextOnRestart": false
+  },
+  "polly": {
+    "voiceId": "Salli"
+  },
+  "recorder": {
+    "preset": "speech_recognition"
+  },
+  "iframe": {
+    "iframeOrigin": "https://lex-web-ui-codebuilddeploy-19pjgxq94-webappbucket-uag9p36abgfw.s3.amazonaws.com",
+    "iframeSrcPath": "/index.html#/?lexWebUiEmbed=true",
+    "shouldLoadIframeMinimized": true
+  }
+}
